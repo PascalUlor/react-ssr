@@ -2,8 +2,8 @@ const path = require('path');
 
 module.exports = {
     mode: 'development',
-    target: 'node',
-    entry: './src/client.js',
+    // target: 'node',
+    entry: './src/client/client.js',
     output: {
         filename: 'client_bundle.js',
         path: path.resolve(__dirname, 'build/public'),
