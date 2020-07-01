@@ -14,6 +14,7 @@ export default function template(title, initialState = {}, content = "", helmet)
                 <html lang="en">
                 <head>
                   <meta charset="utf-8">
+                  <meta name="keywords" content= ${title} "HTML, CSS, JavaScript">
                   ${helmet.meta.toString()}
                   ${helmet.title.toString()}
                   <title> ${title} </title>

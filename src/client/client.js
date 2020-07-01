@@ -1,7 +1,7 @@
 import React from 'react';
-// import ReactDOM  from 'react-dom';
-// import { BrowserRouter} from 'react-router-dom';
-import {hydrate} from 'react-dom';
+import ReactDOM  from 'react-dom';
+import { BrowserRouter} from 'react-router-dom';
+// import {hydrate} from 'react-dom';
 import {Provider} from 'react-redux';
 import configureStore from '../helpers/creatStore';
 import App from './App';
@@ -22,8 +22,10 @@ const store = configureStore(state)
  */
 
 
-hydrate(
+ReactDOM.hydrate(
 <Provider store={store}>
+<BrowserRouter>
 <App initialText="SSR React App" />
+</BrowserRouter>
 </Provider>,
-document.getElementById('root'));
+ document.querySelector('#root'));
